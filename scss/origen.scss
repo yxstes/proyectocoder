@@ -1,0 +1,714 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin texto {
+  color: azure;
+    
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+} 
+ 
+
+
+
+
+$verdefacha: #2bff00;
+body {
+  background-color: rgb(0, 0, 0);
+}
+h1 {
+  color: $verdefacha;
+  font-family: Arial Black, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 35px;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
+
+/* menu desplegable  bem 1 sass1  */
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: $verdefacha;
+  background-image: linear-gradient(147deg, #2bff00 0%, #000000 74%);
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:99;
+  justify-self: center;
+  height: 35px;
+  justify-content: space-between;
+
+  li:hover .menu__submenu {
+    visibility: visible;
+    opacity: 100%;
+  }
+
+  .menu__principal {
+    li {
+      display: inline-block;
+
+      a {
+        color: black;
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+    }
+
+    .menu__submenu {
+      position: absolute;
+      padding: 2px;
+      visibility: hidden;
+
+      li {
+        display: block;
+        padding-top: 2px;
+        a {
+          color: $verdefacha;
+          font-style: oblique;
+        }
+      }
+    }
+  }
+  .menu__ayuda {
+ 
+ 
+    a {
+      text-decoration: none;
+      color: $verdefacha;
+      padding-left: 55px;
+    }
+  }
+  .menu__logo {
+    position: relative;
+    left: 5%;
+    top: -25px;
+    margin-right: 35px;
+    height: 100px;
+   
+  }
+}
+
+/* menu desplegable */
+
+
+
+
+/*breadcrumbs sass1 bem 4*/
+.cajita{
+
+  @include texto ;
+  text-align: center;
+  position: relative;
+    top:20px;
+ 
+  a{
+    text-decoration: none;
+    color: $verdefacha;
+    
+  }
+ }
+
+/*breadcrumbs */
+
+.carrusel {
+  position:relative;
+  top: 5px;
+
+}
+.titulo {
+  position: relative;
+  top: 45px;
+}
+
+/*grid del index sass1 bem 2*/
+
+.center
+
+{
+ display: flex;
+ flex-flow: row wrap;
+ align-items: center;
+ 
+ height: 100%;
+
+}
+  
+.items {
+  
+  width:80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "a b c";
+  margin: auto;
+  margin-top: 25px;;
+  padding-bottom: 10%;
+  column-gap: 2vw;
+
+}
+
+
+.items__item1 {
+  
+  align-self: start;
+  justify-self: center;
+  grid-area: a; }
+
+.items__item2 {
+  align-self: start;
+  justify-self: center;
+  grid-area: b; }
+  .items__item3 {
+    align-self: start;
+    justify-self: center;
+    grid-area: c;
+  }
+  
+
+.items--caja {
+  background-color: white;
+  border: 15px solid white;
+  border-radius: 6px;
+  border-bottom: solid px;
+  box-shadow: rgba(68, 223, 68, 0.494) 0px 20px 30px -10px;
+  width: 24vw;
+  transition: 0.3s; }
+
+  .items--caja:hover {
+    width:26vw;
+    
+  } 
+
+  /*bucle sass2*/
+
+  @for $var from 1 to 4 {
+    .items__item#{ $var}:hover h2 {color:$verdefacha !important; }
+  
+
+
+
+  
+.footer{
+
+  
+  position: relative;
+  top:30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  margin: auto;
+ ul {
+  @include texto();
+    list-style:none;
+  text-align: center; 
+  
+  
+  }
+
+}
+
+  .footer__enlaces a {
+    @include texto();
+    text-align: center;
+    padding: 10px;
+    margin-left: 25px;
+    
+  }
+
+  .redesIcons{
+    display: flex;
+
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+
+    
+    img{
+      width: 50px;
+      padding-left: 25px;
+
+    }
+
+  }
+
+  /* grid para catalogos bem3*/
+
+  .catalogoGridSale {
+
+    display: grid;
+    height: 400px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+     "item1 item2 item3" ;
+    
+    column-gap: 25px;
+    row-gap: 25px;
+    position: relative;
+    top: 75px;
+    
+    justify-content: center;
+     }
+
+  .catalogoGrid {
+
+display: grid;
+height: 800px;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(2,1fr);
+grid-template-areas:
+ "item1 item2 item3" 
+ "item4 item5 item6";
+column-gap: 25px;
+row-gap: 25px;
+position: relative;
+top: 75px;
+
+justify-content: center;
+ }
+
+ .catalogoGrid__item1 {
+
+grid-area: item1;
+align-self: start;
+justify-self: center;
+
+ }
+ .catalogoGrid__item2 {
+
+grid-area: item2;
+align-self: start;
+justify-self: center;
+  
+} .catalogoGrid__item3 {
+
+grid-area: item3;
+align-self: start;
+justify-self: center;
+  
+} .catalogoGrid__item4 {
+
+grid-area: item4;
+align-self: start;
+justify-self: center;
+  
+} .catalogoGrid__item5 {
+
+grid-area: item5;
+align-self: start;
+justify-self: center;
+  
+} .catalogoGrid__item6 {
+
+grid-area: item6;
+align-self: start;
+justify-self: center;
+  
+}
+ /* precios del catalogo y animaciones del catalogo*/
+
+ .catalogoGrid__precios {
+  @include texto ;
+  padding: 10px;
+  margin-top: 10px;;
+  text-align: center;
+  font-weight: bolder;
+  width: 100%;
+  visibility: hidden;
+  
+
+ }
+
+ 
+
+ 
+ 
+/* bucle sass2*/
+  @for $var from 1 to 7 {
+    .catalogoGrid__item#{ $var}:hover h2 {color:$verdefacha !important; }
+  }
+  
+  /*bucles sass 2*/
+
+ @for $i from 1 to 7  {
+  .catalogoGrid__item#{$i}:hover  .catalogoGrid__precios {visibility: visible;
+    opacity: 100%; } } 
+   
+  
+
+  
+
+        /* grid AYUDA*/
+
+
+.gridAyuda{
+  display: grid;
+  height: fit-content;
+  width:60vw;
+  grid-template-rows: 0.5fr 1fr ;
+  grid-template-columns: 1fr 1.5fr ;
+  grid-template-areas: 
+              "tabla cambios"
+              "contacto pagos"
+               ;
+
+  row-gap:8vh;
+  column-gap:10vw;
+  position: relative;
+  top:150px;
+  left: 20vw;
+
+}
+
+/* bem sass1 y mixin sass2*/
+
+.TabladeTalles{
+
+  @include texto;
+ 
+  grid-area: tabla;
+  .tabladeTalles__tabla {
+ 
+  
+    margin: auto;
+    width: 350px;
+   
+    border: 3px solid green;
+    padding: 15px;
+
+    background-color: $verdefacha;
+    color: black;
+   
+    align-self: start;
+justify-self: center;
+    }
+
+
+  }
+
+
+
+
+     
+.contacto {
+  align-self: start;
+  justify-self: center;
+      
+ @include texto();
+  grid-area: contacto;
+  text-align: center;
+ 
+
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+
+
+ input{
+  
+  padding: 10px;
+  margin: 5px;
+  
+  width:45%;
+   }
+   
+textarea{
+  padding: 10px;
+  margin: 5px;
+  
+ width:45%;
+  
+}
+
+}
+
+
+.cambios{
+  grid-area:  cambios;
+  @include texto();
+  text-align: justify ;
+  width: 65%;
+  align-self: start;
+  justify-self: center;
+}
+
+
+/*bem 4 sass 1*/
+.metodosDePago 
+
+{ 
+  text-align: center;
+  grid-area: pagos;
+ 
+ ul{
+   text-align: center;
+   position: relative;
+   left: 7%;
+   width: 100%;
+ }
+  
+  li {
+    list-style: none;
+    color:white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10pt;
+    width :75%;
+    text-align: center;}
+
+  .metodosDePago__naranja{
+    color: $verdefacha !important;
+    text-align:center;
+    
+
+  }
+  .metodosDePago__MP{
+    color: $verdefacha !important;
+    text-align: center;
+
+  }
+
+ 
+  .metodosDePago__trans{
+    color: $verdefacha !important;
+    text-align: center;
+
+  }
+
+.metodosDePago__frances{
+  color: $verdefacha !important;
+  text-align: center;
+}
+    
+}}
+
+
+
+
+@media only screen and (min-width: 120px) and (max-width: 550px)  {
+  .menu {
+    
+    height: 100%;
+    z-index: 99;
+    justify-self: center;
+    height: 35px;
+    justify-content: flex-start; }
+  .center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%; }
+  .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a" "b" "c";
+    margin: auto;
+    margin-top: 25px;
+    padding-bottom: 10%;
+    row-gap: 10vh; }
+  .items--caja {
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 6px;
+    border-bottom: solid px;
+    box-shadow: rgba(68, 223, 68, 0.494) 0px 20px 30px -10px;
+    width: 45vw;
+    transition: 0.3s; }
+  .items--caja:hover {
+    width: 46vw; }
+  .footer {
+    position: relative;
+    flex-flow: column;
+    left: -3vw; }
+    .footer .footer__enlaces {
+      position: relative; }
+  .gridAyuda {
+    display: grid;
+    height: fit-content;
+    width: 60vw;
+    grid-template-rows: repeat(4, 0fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "tabla" "cambios"
+ "contacto" "pagos";
+    row-gap: 8vh;
+    position: relative;
+    top: 150px;
+    left: 15vw; } 
+
+
+    .catalogoGrid {
+ 
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6,1fr);
+      grid-template-areas:
+      "item1" "item2" "item3" "item4" "item5" "item6";
+      
+      row-gap: 5px;
+      position: relative;
+      top: 75px;
+      
+      justify-content: center;
+       }
+  
+       .catalogoGridSale {
+
+        display: grid;
+        height: 400px;
+        grid-template-columns:1fr; 
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas:
+         "item1" "item2" "item3" ;
+        
+        column-gap: 25px;
+        row-gap: 25px;
+        position: relative;
+        top: 75px;
+        
+  
+         }
+  
+
+
+  }
+
+/*query tablet*/
+
+@media only screen and (min-width:550px) and (max-width: 960px){
+
+  .center
+
+  {
+   display:flex;
+   flex-flow: column;
+   align-items: center;
+   
+   height: 100%;
+  
+  }
+    
+  .items {
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: "a b" "c c";
+    margin: auto;
+    margin-top: 25px;;
+    padding-bottom: 10%;
+    row-gap: 10vh;
+  
+  }
+
+
+  .catalogoGrid {
+ 
+ display: grid;
+ width: 100%;
+ height: 100%;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: repeat(3,1fr);
+ grid-template-areas:
+ "item1 item2" "item3 item4" "item5 item6";
+ 
+ row-gap: 5px;
+ position: relative;
+ top: 75px;
+ 
+ justify-content: center;
+  }
+ 
+  .items--caja {
+   background-color: white;
+   border: 15px solid white;
+   border-radius: 6px;
+   border-bottom: solid px;
+   box-shadow: rgba(68, 223, 68, 0.494) 0px 20px 30px -10px;
+   width: 45vw;
+   transition: 0.3s; }
+ 
+   .items--caja:hover {
+   
+     width:46vw;
+ 
+ 
+ 
+ }
+ .footer{
+ 
+   position:relative;
+   flex-flow: column;
+  left: -3vw;
+  
+ 
+ 
+   .footer__enlaces{
+     position: relative;
+    
+     }
+ }
+ 
+  .gridAyuda{
+ 
+   display: grid;
+   height: fit-content;
+   width:60vw;
+   grid-template-rows:repeat(4,0fr) ;
+   grid-template-columns: 1fr ;
+   grid-template-areas: 
+               "tabla" "cambios"
+               "contacto" "pagos"
+                ;
+ 
+   row-gap:8vh;
+ 
+   position: relative;
+   top:150px;
+   left: 15vw;
+  }
+ 
+  .catalogoGridSale {
+
+    display: grid;
+    height: 400px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+     "item1 item2 item3" ;
+    
+    column-gap: 25px;
+    row-gap: 25px;
+    position: relative;
+    top: 75px;
+    
+    justify-content: center;
+     }
+
+}

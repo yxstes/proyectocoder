@@ -1,0 +1,1042 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: black; }
+
+h1 {
+  color: #2bff00;
+  font-family: Arial Black, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 35px;
+  text-align: center; }
+
+h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  text-align: center; }
+
+/* menu desplegable  bem 1 sass1  */
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #2bff00;
+  background-image: linear-gradient(147deg, #2bff00 0%, #000000 74%);
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  justify-self: center;
+  height: 35px;
+  justify-content: space-between; }
+  .menu li:hover .menu__submenu {
+    visibility: visible;
+    opacity: 100%; }
+  .menu .menu__principal li {
+    display: inline-block; }
+    .menu .menu__principal li a {
+      color: black;
+      font-size: 0.8rem;
+      text-decoration: none; }
+  .menu .menu__principal .menu__submenu {
+    position: absolute;
+    padding: 2px;
+    visibility: hidden; }
+    .menu .menu__principal .menu__submenu li {
+      display: block;
+      padding-top: 2px; }
+      .menu .menu__principal .menu__submenu li a {
+        color: #2bff00;
+        font-style: oblique; }
+  .menu .menu__ayuda a {
+    text-decoration: none;
+    color: #2bff00;
+    padding-left: 55px; }
+  .menu .menu__logo {
+    position: relative;
+    left: 5%;
+    top: -25px;
+    margin-right: 35px;
+    height: 100px; }
+
+/* menu desplegable */
+/*breadcrumbs sass1 bem 4*/
+.cajita {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  top: 20px; }
+  .cajita a {
+    text-decoration: none;
+    color: #2bff00; }
+
+/*breadcrumbs */
+.carrusel {
+  position: relative;
+  top: 5px; }
+
+.titulo {
+  position: relative;
+  top: 45px; }
+
+/*grid del index sass1 bem 2*/
+.center {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 100%; }
+
+.items {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "a b c";
+  margin: auto;
+  margin-top: 25px;
+  padding-bottom: 10%;
+  column-gap: 2vw; }
+
+.items__item1 {
+  align-self: start;
+  justify-self: center;
+  grid-area: a; }
+
+.items__item2 {
+  align-self: start;
+  justify-self: center;
+  grid-area: b; }
+
+.items__item3 {
+  align-self: start;
+  justify-self: center;
+  grid-area: c; }
+
+.items--caja {
+  background-color: white;
+  border: 15px solid white;
+  border-radius: 6px;
+  border-bottom: solid px;
+  box-shadow: rgba(68, 223, 68, 0.494) 0px 20px 30px -10px;
+  width: 24vw;
+  transition: 0.3s; }
+
+.items--caja:hover {
+  width: 26vw; }
+
+/*bucle sass2*/
+.items__item1:hover h2 {
+  color: #2bff00 !important; }
+
+.footer {
+  position: relative;
+  top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto; }
+  .footer ul {
+    color: azure;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 12px;
+    list-style: none;
+    text-align: center; }
+
+.footer__enlaces a {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 25px; }
+
+.redesIcons {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px; }
+  .redesIcons img {
+    width: 50px;
+    padding-left: 25px; }
+
+/* grid para catalogos bem3*/
+.catalogoGridSale {
+  display: grid;
+  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "item1 item2 item3";
+  column-gap: 25px;
+  row-gap: 25px;
+  position: relative;
+  top: 75px;
+  justify-content: center; }
+
+.catalogoGrid {
+  display: grid;
+  height: 800px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "item1 item2 item3"  "item4 item5 item6";
+  column-gap: 25px;
+  row-gap: 25px;
+  position: relative;
+  top: 75px;
+  justify-content: center; }
+
+.catalogoGrid__item1 {
+  grid-area: item1;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item2 {
+  grid-area: item2;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item3 {
+  grid-area: item3;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item4 {
+  grid-area: item4;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item5 {
+  grid-area: item5;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item6 {
+  grid-area: item6;
+  align-self: start;
+  justify-self: center; }
+
+/* precios del catalogo y animaciones del catalogo*/
+.catalogoGrid__precios {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bolder;
+  width: 100%;
+  visibility: hidden; }
+
+/* bucle sass2*/
+.catalogoGrid__item1:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item2:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item3:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item4:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item5:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item6:hover h2 {
+  color: #2bff00 !important; }
+
+/*bucles sass 2*/
+.catalogoGrid__item1:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item2:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item3:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item4:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item5:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item6:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+/* grid AYUDA*/
+.gridAyuda {
+  display: grid;
+  height: fit-content;
+  width: 60vw;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-areas: "tabla cambios" "contacto pagos";
+  row-gap: 8vh;
+  column-gap: 10vw;
+  position: relative;
+  top: 150px;
+  left: 20vw; }
+
+/* bem sass1 y mixin sass2*/
+.TabladeTalles {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  grid-area: tabla; }
+  .TabladeTalles .tabladeTalles__tabla {
+    margin: auto;
+    width: 350px;
+    border: 3px solid green;
+    padding: 15px;
+    background-color: #2bff00;
+    color: black;
+    align-self: start;
+    justify-self: center; }
+
+.contacto {
+  align-self: start;
+  justify-self: center;
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  grid-area: contacto;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap; }
+  .contacto input {
+    padding: 10px;
+    margin: 5px;
+    width: 45%; }
+  .contacto textarea {
+    padding: 10px;
+    margin: 5px;
+    width: 45%; }
+
+.cambios {
+  grid-area: cambios;
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: justify;
+  width: 65%;
+  align-self: start;
+  justify-self: center; }
+
+/*bem 4 sass 1*/
+.metodosDePago {
+  text-align: center;
+  grid-area: pagos; }
+  .metodosDePago ul {
+    text-align: center;
+    position: relative;
+    left: 7%;
+    width: 100%; }
+  .metodosDePago li {
+    list-style: none;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10pt;
+    width: 75%;
+    text-align: center; }
+  .metodosDePago .metodosDePago__naranja {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__MP {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__trans {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__frances {
+    color: #2bff00 !important;
+    text-align: center; }
+
+.items__item2:hover h2 {
+  color: #2bff00 !important; }
+
+.footer {
+  position: relative;
+  top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto; }
+  .footer ul {
+    color: azure;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 12px;
+    list-style: none;
+    text-align: center; }
+
+.footer__enlaces a {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 25px; }
+
+.redesIcons {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px; }
+  .redesIcons img {
+    width: 50px;
+    padding-left: 25px; }
+
+/* grid para catalogos bem3*/
+.catalogoGridSale {
+  display: grid;
+  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "item1 item2 item3";
+  column-gap: 25px;
+  row-gap: 25px;
+  position: relative;
+  top: 75px;
+  justify-content: center; }
+
+.catalogoGrid {
+  display: grid;
+  height: 800px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "item1 item2 item3"  "item4 item5 item6";
+  column-gap: 25px;
+  row-gap: 25px;
+  position: relative;
+  top: 75px;
+  justify-content: center; }
+
+.catalogoGrid__item1 {
+  grid-area: item1;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item2 {
+  grid-area: item2;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item3 {
+  grid-area: item3;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item4 {
+  grid-area: item4;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item5 {
+  grid-area: item5;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item6 {
+  grid-area: item6;
+  align-self: start;
+  justify-self: center; }
+
+/* precios del catalogo y animaciones del catalogo*/
+.catalogoGrid__precios {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bolder;
+  width: 100%;
+  visibility: hidden; }
+
+/* bucle sass2*/
+.catalogoGrid__item1:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item2:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item3:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item4:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item5:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item6:hover h2 {
+  color: #2bff00 !important; }
+
+/*bucles sass 2*/
+.catalogoGrid__item1:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item2:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item3:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item4:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item5:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item6:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+/* grid AYUDA*/
+.gridAyuda {
+  display: grid;
+  height: fit-content;
+  width: 60vw;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-areas: "tabla cambios" "contacto pagos";
+  row-gap: 8vh;
+  column-gap: 10vw;
+  position: relative;
+  top: 150px;
+  left: 20vw; }
+
+/* bem sass1 y mixin sass2*/
+.TabladeTalles {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  grid-area: tabla; }
+  .TabladeTalles .tabladeTalles__tabla {
+    margin: auto;
+    width: 350px;
+    border: 3px solid green;
+    padding: 15px;
+    background-color: #2bff00;
+    color: black;
+    align-self: start;
+    justify-self: center; }
+
+.contacto {
+  align-self: start;
+  justify-self: center;
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  grid-area: contacto;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap; }
+  .contacto input {
+    padding: 10px;
+    margin: 5px;
+    width: 45%; }
+  .contacto textarea {
+    padding: 10px;
+    margin: 5px;
+    width: 45%; }
+
+.cambios {
+  grid-area: cambios;
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: justify;
+  width: 65%;
+  align-self: start;
+  justify-self: center; }
+
+/*bem 4 sass 1*/
+.metodosDePago {
+  text-align: center;
+  grid-area: pagos; }
+  .metodosDePago ul {
+    text-align: center;
+    position: relative;
+    left: 7%;
+    width: 100%; }
+  .metodosDePago li {
+    list-style: none;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10pt;
+    width: 75%;
+    text-align: center; }
+  .metodosDePago .metodosDePago__naranja {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__MP {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__trans {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__frances {
+    color: #2bff00 !important;
+    text-align: center; }
+
+.items__item3:hover h2 {
+  color: #2bff00 !important; }
+
+.footer {
+  position: relative;
+  top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto; }
+  .footer ul {
+    color: azure;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 12px;
+    list-style: none;
+    text-align: center; }
+
+.footer__enlaces a {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 25px; }
+
+.redesIcons {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px; }
+  .redesIcons img {
+    width: 50px;
+    padding-left: 25px; }
+
+/* grid para catalogos bem3*/
+.catalogoGridSale {
+  display: grid;
+  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "item1 item2 item3";
+  column-gap: 25px;
+  row-gap: 25px;
+  position: relative;
+  top: 75px;
+  justify-content: center; }
+
+.catalogoGrid {
+  display: grid;
+  height: 800px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "item1 item2 item3"  "item4 item5 item6";
+  column-gap: 25px;
+  row-gap: 25px;
+  position: relative;
+  top: 75px;
+  justify-content: center; }
+
+.catalogoGrid__item1 {
+  grid-area: item1;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item2 {
+  grid-area: item2;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item3 {
+  grid-area: item3;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item4 {
+  grid-area: item4;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item5 {
+  grid-area: item5;
+  align-self: start;
+  justify-self: center; }
+
+.catalogoGrid__item6 {
+  grid-area: item6;
+  align-self: start;
+  justify-self: center; }
+
+/* precios del catalogo y animaciones del catalogo*/
+.catalogoGrid__precios {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bolder;
+  width: 100%;
+  visibility: hidden; }
+
+/* bucle sass2*/
+.catalogoGrid__item1:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item2:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item3:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item4:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item5:hover h2 {
+  color: #2bff00 !important; }
+
+.catalogoGrid__item6:hover h2 {
+  color: #2bff00 !important; }
+
+/*bucles sass 2*/
+.catalogoGrid__item1:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item2:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item3:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item4:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item5:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+.catalogoGrid__item6:hover .catalogoGrid__precios {
+  visibility: visible;
+  opacity: 100%; }
+
+/* grid AYUDA*/
+.gridAyuda {
+  display: grid;
+  height: fit-content;
+  width: 60vw;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-areas: "tabla cambios" "contacto pagos";
+  row-gap: 8vh;
+  column-gap: 10vw;
+  position: relative;
+  top: 150px;
+  left: 20vw; }
+
+/* bem sass1 y mixin sass2*/
+.TabladeTalles {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  grid-area: tabla; }
+  .TabladeTalles .tabladeTalles__tabla {
+    margin: auto;
+    width: 350px;
+    border: 3px solid green;
+    padding: 15px;
+    background-color: #2bff00;
+    color: black;
+    align-self: start;
+    justify-self: center; }
+
+.contacto {
+  align-self: start;
+  justify-self: center;
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  grid-area: contacto;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap; }
+  .contacto input {
+    padding: 10px;
+    margin: 5px;
+    width: 45%; }
+  .contacto textarea {
+    padding: 10px;
+    margin: 5px;
+    width: 45%; }
+
+.cambios {
+  grid-area: cambios;
+  color: azure;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  text-align: justify;
+  width: 65%;
+  align-self: start;
+  justify-self: center; }
+
+/*bem 4 sass 1*/
+.metodosDePago {
+  text-align: center;
+  grid-area: pagos; }
+  .metodosDePago ul {
+    text-align: center;
+    position: relative;
+    left: 7%;
+    width: 100%; }
+  .metodosDePago li {
+    list-style: none;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10pt;
+    width: 75%;
+    text-align: center; }
+  .metodosDePago .metodosDePago__naranja {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__MP {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__trans {
+    color: #2bff00 !important;
+    text-align: center; }
+  .metodosDePago .metodosDePago__frances {
+    color: #2bff00 !important;
+    text-align: center; }
+
+@media only screen and (min-width: 120px) and (max-width: 550px) {
+  .menu {
+    height: 100%;
+    z-index: 99;
+    justify-self: center;
+    height: 35px;
+    justify-content: flex-start; }
+  .center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%; }
+  .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a" "b" "c";
+    margin: auto;
+    margin-top: 25px;
+    padding-bottom: 10%;
+    row-gap: 10vh; }
+  .items--caja {
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 6px;
+    border-bottom: solid px;
+    box-shadow: rgba(68, 223, 68, 0.494) 0px 20px 30px -10px;
+    width: 45vw;
+    transition: 0.3s; }
+  .items--caja:hover {
+    width: 46vw; }
+  .footer {
+    position: relative;
+    flex-flow: column;
+    left: -3vw; }
+  .footer .footer__enlaces {
+    position: relative; }
+  .gridAyuda {
+    display: grid;
+    height: fit-content;
+    width: 60vw;
+    grid-template-rows: repeat(4, 0fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "tabla" "cambios" "contacto" "pagos";
+    row-gap: 8vh;
+    position: relative;
+    top: 150px;
+    left: 15vw; }
+  .catalogoGrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6";
+    row-gap: 5px;
+    position: relative;
+    top: 75px;
+    justify-content: center; }
+  .catalogoGridSale {
+    display: grid;
+    height: 400px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "item1" "item2" "item3";
+    column-gap: 25px;
+    row-gap: 25px;
+    position: relative;
+    top: 75px; } }
+
+/*query tablet*/
+@media only screen and (min-width: 550px) and (max-width: 960px) {
+  .center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%; }
+  .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b" "c c";
+    margin: auto;
+    margin-top: 25px;
+    padding-bottom: 10%;
+    row-gap: 10vh; }
+  .catalogoGrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "item1 item2" "item3 item4" "item5 item6";
+    row-gap: 5px;
+    position: relative;
+    top: 75px;
+    justify-content: center; }
+  .items--caja {
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 6px;
+    border-bottom: solid px;
+    box-shadow: rgba(68, 223, 68, 0.494) 0px 20px 30px -10px;
+    width: 45vw;
+    transition: 0.3s; }
+  .items--caja:hover {
+    width: 46vw; }
+  .footer {
+    position: relative;
+    flex-flow: column;
+    left: -3vw; }
+    .footer .footer__enlaces {
+      position: relative; }
+  .gridAyuda {
+    display: grid;
+    height: fit-content;
+    width: 60vw;
+    grid-template-rows: repeat(4, 0fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "tabla" "cambios" "contacto" "pagos";
+    row-gap: 8vh;
+    position: relative;
+    top: 150px;
+    left: 15vw; }
+  .catalogoGridSale {
+    display: grid;
+    height: 400px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "item1 item2 item3";
+    column-gap: 25px;
+    row-gap: 25px;
+    position: relative;
+    top: 75px;
+    justify-content: center; } }
