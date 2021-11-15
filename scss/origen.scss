@@ -42,73 +42,7 @@ h2 {
 
 
 
-/* menu desplegable  bem 1 sass1  */
-.menu {
-  display: flex;
-  flex-flow: row nowrap;
-  background-color: $verdefacha;
-  background-image: linear-gradient(147deg, #2bff00 0%, #000000 74%);
-  position: sticky;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index:99;
-  justify-self: center;
-  height: 35px;
-  justify-content: space-between;
 
-  li:hover .menu__submenu {
-    visibility: visible;
-    opacity: 100%;
-  }
-
-  .menu__principal {
-    li {
-      display: inline-block;
-
-      a {
-        color: black;
-        font-size: 0.8rem;
-        text-decoration: none;
-      }
-    }
-
-    .menu__submenu {
-      position: absolute;
-      padding: 2px;
-      visibility: hidden;
-
-      li {
-        display: block;
-        padding-top: 2px;
-        a {
-          color: $verdefacha;
-          font-style: oblique;
-        }
-      }
-    }
-  }
-  .menu__ayuda {
- 
- 
-    a {
-      text-decoration: none;
-      color: $verdefacha;
-      padding-left: 55px;
-    }
-  }
-  .menu__logo {
-    position: relative;
-    left: 5%;
-    top: -25px;
-    margin-right: 35px;
-    height: 100px;
-   
-  }
-}
-
-/* menu desplegable */
 
 
 
@@ -210,13 +144,13 @@ h2 {
   
 .footer{
 
-  
-  position: relative;
-  top:30vh;
+  height: 100%;
+ width: 100%;
+  padding-top: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width:100%;
+ 
   margin: auto;
  ul {
   @include texto();
@@ -231,24 +165,18 @@ h2 {
   .footer__enlaces a {
     @include texto();
     text-align: center;
-    padding: 10px;
-    margin-left: 25px;
+    padding-left: 25px;
+  
     
   }
 
   .redesIcons{
-    display: flex;
+    display:inline-block;
 
-    flex-direction: row;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding-top: 25px;
-
-    
+  
     img{
-      width: 50px;
-      padding-left: 25px;
+      width:35px;
+     
 
     }
 
@@ -366,22 +294,26 @@ justify-self: center;
 
 .gridAyuda{
   display: grid;
-  height: fit-content;
-  width:60vw;
-  grid-template-rows: 0.5fr 1fr ;
-  grid-template-columns: 1fr 1.5fr ;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 0.5fr 1fr  ;
+  grid-template-columns: 1fr 1fr ;
   grid-template-areas: 
               "tabla cambios"
               "contacto pagos"
+              
                ;
 
-  row-gap:8vh;
+  row-gap:15px;
   column-gap:10vw;
-  position: relative;
-  top:150px;
-  left: 20vw;
+padding-top: 100px;
+padding-left: 35px;
+padding-right: 35px;
+margin:auto;
 
 }
+
+
 
 
 /* bem sass1 y mixin sass2*/
@@ -506,16 +438,10 @@ textarea{
 }}
 
 
-
+/* MEDIA QUERIE CELULAR*/
 
 @media only screen and (min-width: 120px) and (max-width: 550px)  {
-  .menu {
-    
-    height: 100%;
-    z-index: 99;
-    justify-self: center;
-    height: 35px;
-    justify-content: flex-start; }
+  
   .center {
     display: flex;
     flex-flow: column;
@@ -541,24 +467,58 @@ textarea{
     transition: 0.3s; }
   .items--caja:hover {
     width: 46vw; }
-  .footer {
-    position: relative;
-    flex-flow: column;
-    left: -3vw; }
-    .footer .footer__enlaces {
-      position: relative; }
+    
+    
+    .footer{
+
+      height: 100%;
+     width: 100%;
+      padding-top: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
+      margin: auto;
+     ul {
+      @include texto();
+        list-style:none;
+      text-align: center; 
+      
+      
+      }
+    
+    }
+    
+      .footer__enlaces a {
+        @include texto();
+        text-align: center;
+        padding-left: 25px;
+      
+        
+      }
+    
+      .redesIcons{
+        display:inline-block;
+    
+      
+        img{
+          width:35px;
+         
+    
+        }
+    
+      }
   .gridAyuda {
     display: grid;
-    height: fit-content;
-    width: 60vw;
-    grid-template-rows: repeat(4, 0fr);
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(4,0.5fr);
     grid-template-columns: 1fr;
     grid-template-areas: "tabla" "cambios"
- "contacto" "pagos";
-    row-gap: 8vh;
-    position: relative;
-    top: 150px;
-    left: 15vw; } 
+ "contacto" "pagos" ;
+    row-gap:5px;
+ 
+   } 
 
 
     .catalogoGrid {
@@ -581,7 +541,7 @@ textarea{
        .catalogoGridSale {
 
         display: grid;
-        height: 400px;
+        height: 100%;
         grid-template-columns:1fr; 
         grid-template-rows: repeat(3,1fr);
         grid-template-areas:
@@ -661,46 +621,69 @@ textarea{
  
  }
  .footer{
+
+  height: 100%;
+ width: 100%;
+  padding-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  
-   position:relative;
-   flex-flow: column;
-  left: -3vw;
+  margin: auto;
+ ul {
+  @include texto();
+    list-style:none;
+  text-align: center; 
   
- 
- 
-   .footer__enlaces{
-     position: relative;
+  
+  }
+
+}
+
+  .footer__enlaces a {
+    @include texto();
+    text-align: center;
+    padding-left: 25px;
+  
     
-     }
- }
+  }
+
+  .redesIcons{
+    display:inline-block;
+
+  
+    img{
+      width:35px;
+     
+
+    }
+
+  }
  
   .gridAyuda{
  
    display: grid;
-   height: fit-content;
-   width:60vw;
-   grid-template-rows:repeat(4,0fr) ;
+   height:100%;
+   width:100%;
+   grid-template-rows:repeat(4,0.8fr) ;
    grid-template-columns: 1fr ;
    grid-template-areas: 
                "tabla" "cambios"
                "contacto" "pagos"
                 ;
  
-   row-gap:8vh;
- 
-   position: relative;
-   top:150px;
-   left: 15vw;
+   row-gap:25px;
+ ;
   }
  
   .catalogoGridSale {
 
     display: grid;
-    height: 400px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
+    height: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-     "item1 item2 item3" ;
+     "item1 item2" " item3 item3" ;
     
     column-gap: 25px;
     row-gap: 25px;
