@@ -20,7 +20,7 @@
 
 $verdefacha: #2bff00;
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0) !important;
 }
 h1 {
   color: $verdefacha;
@@ -711,3 +711,4 @@ textarea{
      }
 
 }
+
