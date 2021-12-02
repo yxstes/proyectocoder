@@ -204,7 +204,7 @@ h2 {
   .catalogoGrid {
 
 display: grid;
-height: 800px;
+height:100%;
 grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(2,1fr);
 grid-template-areas:
